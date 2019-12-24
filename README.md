@@ -7,7 +7,7 @@ The action is based on [this]( https://github.com/bitoiu/node-js-action-template
 ## example usage
 ```
       - name: manifest Version
-        uses: deef0000dragon1/json-edit-action/@master
+        uses: deef0000dragon1/json-edit-action/@v1
         env:
           KEY: version
           VALUE: v0.1.1
