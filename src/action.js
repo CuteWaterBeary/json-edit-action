@@ -1,6 +1,8 @@
 // Requires and variable definition
 const log = require('loglevel')
 const fs = require('fs')
+const editJsonFile = require("edit-json-file");
+
 
 // Uncomment this if you want to check if your local env variables are being set
 // console.dir(process.env)
@@ -18,3 +20,14 @@ log.trace(`Event data: ${JSON.stringify(getEventData())}`)
 
 // Write your code :)
 log.info("You are ready to start coding your GitHub Action")
+
+let file = process.env.FILE
+let key = process.env.KEY
+let value = process.env.VALUE
+
+
+let file = editJsonFile(file);
+log.info("setting " + key + " to " + value)
+file.set(key, value)
+log.info("saving")
+file.save()
