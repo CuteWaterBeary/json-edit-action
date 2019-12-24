@@ -21,13 +21,27 @@ log.trace(`Event data: ${JSON.stringify(getEventData())}`)
 // Write your code :)
 log.info("You are ready to start coding your GitHub Action")
 
-let file = process.env.FILE
+let filename = process.env.FILE
+if (filename == undefined ){
+  log.info("no filename. Setting to test.json")
+  filename = "test.json"
+}
 let key = process.env.KEY
+if (key == undefined){
+  log.info("no key. Setting to test")
+  filename = "test.json"
+  key = "test"
+}
 let value = process.env.VALUE
+if (value == undefined){
+  log.info("no value. Setting to test")
+  filename = "test.json"
+  value = "test"
+}
 
-
-let file = editJsonFile(file);
-log.info("setting " + key + " to " + value)
+log.info("loading file " + filename)
+let file = editJsonFile(filename);
+log.info("setting kwy:" + key + " to value:" + value)
 file.set(key, value)
 log.info("saving")
 file.save()
