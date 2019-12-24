@@ -2,7 +2,7 @@
 
 This is a VERY simple action, whos entire point is to make simple changes to json files.
 
-The action template is based on https://github.com/bitoiu/node-js-action-template, and the json editing is based on https://www.npmjs.com/package/edit-json-file. Any formatting for the environment variables is in the npm package.
+The action is based on [this]( https://github.com/bitoiu/node-js-action-template) template, and the json editing is based on https://www.npmjs.com/package/edit-json-file. Any formatting for the environment variables is in the npm package.
 
 ## example usage
 ```
