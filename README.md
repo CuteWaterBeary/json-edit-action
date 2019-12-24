@@ -14,4 +14,4 @@ The action is based on [this]( https://github.com/bitoiu/node-js-action-template
           FILE: manifest.json
 ```
 
-Useage for more than a few edits is not recomended. It may be more efficent to code a custom json file editor.
+Useage for more than a few edits is not recomended. It may be more efficent to code a custom json file creator/editor script. for your use-case.
