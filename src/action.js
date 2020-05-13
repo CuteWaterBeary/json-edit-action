@@ -18,9 +18,6 @@ log.setLevel(process.env.LOG_LEVEL || 'info')
 // Print out the event data
 log.trace(`Event data: ${JSON.stringify(getEventData())}`)
 
-// Write your code :)
-log.info("You are ready to start coding your GitHub Action")
-
 let filename = process.env.FILE
 if (filename == undefined ){
   log.info("no filename. Setting to test.json")
@@ -41,7 +38,7 @@ if (value == undefined){
 
 log.info("loading file " + filename)
 let file = editJsonFile(filename);
-log.info("setting kwy:" + key + " to value:" + value)
+log.info("setting key:" + key + " to value:" + value)
 file.set(key, value)
 log.info("saving")
 file.save()
